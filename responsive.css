@@ -1,0 +1,1107 @@
+/* =========================================================
+   MEGAPIXEL - RESPONSIVE
+   Adaptación para laptop, tablet y celular
+========================================================= */
+
+
+/* =========================
+   LAPTOP / TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+        padding: 0 30px;
+    }
+
+    .header-logo {
+        width: 190px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    /* Menú móvil */
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+
+        background: #050505;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 30px;
+
+        transform: translateY(-100%);
+        transition: transform .5s ease;
+
+        z-index: 1001;
+    }
+
+    .nav.open {
+        transform: translateY(0);
+    }
+
+    .nav a {
+        font-size: 32px;
+        font-weight: 800;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero-logo {
+        width: min(420px, 60vw);
+    }
+
+    .hero-title {
+        font-size: clamp(65px, 11vw, 110px);
+        letter-spacing: -5px;
+    }
+
+
+    /* SECCIONES */
+
+    .intro-grid,
+    .services-heading,
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+
+    /* PROCESO */
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* SERVICIOS */
+
+    .service-feature,
+    .service-feature.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .service-feature.reverse .service-feature-image {
+        order: 0;
+    }
+
+
+    
+/* =========================================
+   MEGAPIXEL - CONTACTO
+   COLORES ORIGINALES NEGRO Y NARANJA
+========================================= */
+
+:root {
+    --mp-orange: #ff8c00;
+    --mp-black: #080808;
+    --mp-white: #ffffff;
+    --mp-gray: #a5a5a5;
+    --mp-border: #292929;
+}
+
+/* FONDO GENERAL */
+
+.contact-page {
+    background: var(--mp-black);
+    color: var(--mp-white);
+    padding: 110px 8% 80px;
+    min-height: 100vh;
+}
+
+/* TITULO PRINCIPAL */
+
+.contact-title {
+    max-width: 1100px;
+    margin: 0 auto 85px;
+    text-align: left;
+}
+
+.contact-title .eyebrow {
+    color: var(--mp-gray);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin-bottom: 45px;
+}
+
+.contact-title h1 {
+    color: var(--mp-white);
+    font-size: clamp(48px, 8vw, 110px);
+    font-weight: 900;
+    line-height: .95;
+    letter-spacing: -4px;
+    margin-bottom: 35px;
+}
+
+.contact-title h1 span {
+    display: block;
+    color: var(--mp-orange);
+}
+
+.contact-title > p:last-child {
+    max-width: 570px;
+    margin: 0;
+    color: var(--mp-gray);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* CONTENEDOR DEL NUMERO */
+
+.mp-contact-box {
+    max-width: 1100px;
+    margin: 0 auto 130px;
+    padding: 75px 55px;
+    background: #101010;
+    border: 1px solid var(--mp-border);
+    border-radius: 4px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+/* DETALLE NARANJA SUPERIOR */
+
+.mp-contact-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 55px;
+    background: var(--mp-orange);
+}
+
+.mp-contact-label {
+    color: var(--mp-gray);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.mp-contact-number {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0;
+    color: var(--mp-white);
+    font-size: clamp(35px, 6vw, 78px);
+    font-weight: 900;
+    letter-spacing: -3px;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.mp-contact-number:hover {
+    color: var(--mp-orange);
+}
+
+.mp-contact-description {
+    max-width: 520px;
+    margin: 30px 0 40px;
+    color: var(--mp-gray);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* BOTON WHATSAPP */
+
+.mp-whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 22px 32px;
+    background: var(--mp-orange);
+    color: var(--mp-black);
+    border: 1px solid var(--mp-orange);
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: all .35s ease;
+}
+
+.mp-whatsapp-btn span {
+    font-size: 26px;
+    transition: transform .3s ease;
+}
+
+.mp-whatsapp-btn:hover {
+    background: transparent;
+    color: var(--mp-orange);
+    transform: translateY(-4px);
+}
+
+.mp-whatsapp-btn:hover span {
+    transform: translate(5px, -5px);
+}
+
+/* REDES SOCIALES */
+
+.mp-social-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.mp-social-section .eyebrow {
+    color: var(--mp-gray);
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.mp-social-section h2 {
+    color: var(--mp-white);
+    font-size: clamp(42px, 6vw, 85px);
+    font-weight: 900;
+    line-height: .98;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
+}
+
+.mp-social-section h2 span {
+    display: block;
+    color: var(--mp-orange);
+}
+
+.mp-social-section > p:not(.eyebrow) {
+    color: var(--mp-gray);
+    max-width: 540px;
+    margin: 0 0 60px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* TARJETAS DE REDES */
+
+.mp-social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.mp-social-card {
+    position: relative;
+    padding: 45px 28px;
+    background: #111111;
+    border: 1px solid var(--mp-border);
+    border-radius: 3px;
+    text-align: left;
+    transition: all .4s ease;
+}
+
+.mp-social-card:hover {
+    background: #191919;
+    border-color: var(--mp-orange);
+    transform: translateY(-8px);
+}
+
+.mp-social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    margin-bottom: 35px;
+    background: var(--mp-orange);
+    color: var(--mp-black);
+    border-radius: 50%;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.mp-social-card h3 {
+    color: var(--mp-white);
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.mp-social-card p {
+    color: var(--mp-gray);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.mp-social-arrow {
+    position: absolute;
+    top: 40px;
+    right: 28px;
+    color: var(--mp-orange);
+    font-size: 28px;
+    transition: transform .3s ease;
+}
+
+.mp-social-card:hover .mp-social-arrow {
+    transform: translate(5px, -5px);
+}
+
+/* FRASE FINAL */
+
+.mp-contact-footer {
+    max-width: 1100px;
+    margin: 140px auto 0;
+    padding: 70px 0 30px;
+    border-top: 1px solid #333333;
+    text-align: left;
+}
+
+.mp-contact-footer p {
+    color: var(--mp-gray);
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.mp-contact-footer h2 {
+    color: var(--mp-white);
+    font-size: clamp(40px, 6vw, 85px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -3px;
+}
+
+.mp-contact-footer h2 span {
+    display: block;
+    color: var(--mp-orange);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .mp-social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contact-page {
+        padding: 75px 6% 50px;
+    }
+
+    .contact-title {
+        margin-bottom: 55px;
+    }
+
+    .contact-title h1 {
+        font-size: clamp(40px, 10vw, 65px);
+        letter-spacing: -2px;
+    }
+
+    .contact-title .eyebrow {
+        margin-bottom: 30px;
+    }
+
+    .contact-title > p:last-child {
+        font-size: 15px;
+    }
+
+    .mp-contact-box {
+        padding: 45px 25px;
+        margin-bottom: 95px;
+    }
+
+    .mp-contact-number {
+        font-size: clamp(30px, 7vw, 48px);
+        letter-spacing: -1px;
+    }
+
+    .mp-contact-description {
+        font-size: 14px;
+    }
+
+    .mp-whatsapp-btn {
+        gap: 15px;
+        padding: 18px 20px;
+        font-size: 11px;
+    }
+
+    .mp-social-section h2 {
+        font-size: clamp(35px, 8vw, 55px);
+        letter-spacing: -1px;
+    }
+
+    .mp-social-section > p:not(.eyebrow) {
+        font-size: 15px;
+    }
+
+    .mp-social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mp-social-card {
+        padding: 35px 25px;
+    }
+
+    .mp-contact-footer {
+        margin-top: 90px;
+        padding-top: 50px;
+    }
+
+    .mp-contact-footer h2 {
+        letter-spacing: -1px;
+    }
+}
+
+@media (max-width: 380px) {
+    .mp-contact-number {
+        font-size: 27px;
+    }
+}
+
+}
+
+
+/* ==========================================
+   MEGAPIXEL - CORRECCIÓN NOSOTROS MÓVIL
+   CONSERVA DISEÑO Y COLORES ORIGINALES
+========================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* HEADER */
+
+    .header {
+        padding: 10px 5%;
+        min-height: 75px;
+    }
+
+    .header-logo {
+        display: flex;
+        align-items: center;
+        min-width: 0;
+    }
+
+    .header-logo img {
+        width: 115px;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .menu-btn {
+        flex-shrink: 0;
+    }
+
+    /* HERO NOSOTROS */
+
+    .page-hero {
+        min-height: auto;
+        height: auto;
+        padding: 55px 5% 65px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+    .page-hero .eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+        line-height: 1.5;
+        margin: 0 0 28px;
+        display:space-between;
+    }
+
+    .page-hero h1 {
+        width: 100%;
+        font-size: clamp(38px, 10vw, 65px);
+        line-height: 1;
+        letter-spacing: -1.5px;
+        margin: 0 0 30px;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .page-hero h1 span {
+        display: block;
+    }
+
+    .page-description {
+        width: 100%;
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    /* QUIÉNES SOMOS */
+
+    .about-section {
+        min-height: auto;
+        padding: 55px 5% 65px;
+    }
+
+    .section-number {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-bottom: 35px;
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        width: 100%;
+    }
+
+    .big-heading {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(30px, 8vw, 55px);
+        line-height: 1.05;
+        letter-spacing: -1.5px;
+        margin: 0;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .big-heading span {
+        display: block;
+        font-size: inherit;
+        overflow-wrap: anywhere;
+    }
+
+    .about-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-text p {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 18px;
+    }
+
+    /* NUESTRA ESENCIA */
+
+    .process {
+        padding: 60px 5%;
+    }
+
+    .process-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .process-item {
+        min-width: 0;
+        padding: 25px 20px;
+    }
+
+    .process-item h3 {
+        font-size: 23px;
+    }
+
+    .process-item p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* CTA */
+
+    .cta {
+        padding: 70px 5%;
+    }
+
+    .cta h2 {
+        font-size: clamp(35px, 9vw, 60px);
+        line-height: 1.05;
+        overflow-wrap: anywhere;
+    }
+
+    .cta-button {
+        max-width: 100%;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .footer-logo img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ==========================================
+   CELULARES PEQUEÑOS
+========================================== */
+
+@media screen and (max-width: 400px) {
+
+    .page-hero {
+        padding-top: 45px;
+        padding-bottom: 55px;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(34px, 10vw, 42px);
+        letter-spacing: -1px;
+    }
+
+    .page-description {
+        font-size: 13px;
+    }
+
+    .about-section {
+        padding-top: 45px;
+    }
+
+    .big-heading {
+        font-size: clamp(27px, 7.5vw, 34px);
+        letter-spacing: -1px;
+    }
+
+    .big-heading span {
+        overflow-wrap: anywhere;
+    }
+
+    .section-number {
+        margin-bottom: 30px;
+    }
+
+    .about-text p {
+        font-size: 13px;
+    }
+
+    .cta h2 {
+        font-size: clamp(32px, 8vw, 42px);
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+        height: 80px;
+        padding: 0 20px;
+    }
+
+    .header.scrolled {
+        height: 70px;
+    }
+
+    .header-logo {
+        width: 145px;
+    }
+
+
+    /* =========================
+       MENÚ
+    ========================= */
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        padding: 100px 20px 40px;
+    }
+
+    .nav a {
+        font-size: 30px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        min-height: 100svh;
+
+        padding:
+            120px 20px
+            60px;
+    }
+
+    .hero-logo {
+        width: min(290px, 85vw);
+        margin-bottom: 30px;
+    }
+
+    .hero-title {
+        font-size: clamp(48px, 15vw, 78px);
+        line-height: .84;
+        letter-spacing: -3px;
+    }
+
+    .hero-title span {
+        -webkit-text-stroke: 1px #fff;
+    }
+
+    .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 35px;
+        margin-top: 40px;
+    }
+
+    .hero-bottom p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .circle-button {
+        width: 115px;
+        height: 115px;
+    }
+
+    .scroll-text {
+        display: none;
+    }
+
+
+    /* =========================
+       MARQUESINA
+    ========================= */
+
+    .marquee {
+        padding: 15px 0;
+    }
+
+    .marquee-track span {
+        font-size: 28px;
+    }
+
+
+    /* =========================
+       SECCIONES
+    ========================= */
+
+    .section {
+        width: 100%;
+        padding: 85px 20px;
+    }
+
+    .section-number {
+        margin-bottom: 45px;
+    }
+
+
+    /* =========================
+       TÍTULOS
+    ========================= */
+
+    .big-heading {
+        font-size: clamp(45px, 14vw, 70px);
+        line-height: .88;
+        letter-spacing: -3px;
+    }
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .intro-copy p {
+        font-size: 16px;
+    }
+
+
+    /* =========================
+       IMAGEN GRANDE
+    ========================= */
+
+    .feature-image {
+        width: 100%;
+        height: 65vh;
+        min-height: 480px;
+
+        margin: 20px 0;
+    }
+
+    .feature-image img {
+        width: 100%;
+        height: 110%;
+
+        object-fit: cover;
+    }
+
+    .feature-overlay {
+        padding: 30px 20px;
+    }
+
+    .feature-overlay h2 {
+        font-size: clamp(45px, 14vw, 72px);
+        letter-spacing: -3px;
+    }
+
+
+    /* =========================
+       SERVICIOS
+    ========================= */
+
+    .services-heading {
+        grid-template-columns: 1fr;
+        gap: 35px;
+
+        margin-bottom: 60px;
+    }
+
+    .service-row {
+        grid-template-columns:
+            35px
+            1fr
+            35px;
+
+        min-height: 105px;
+
+        gap: 10px;
+    }
+
+    .service-row p {
+        display: none;
+    }
+
+    .service-row h3 {
+        font-size: clamp(23px, 7vw, 34px);
+    }
+
+    .arrow {
+        font-size: 25px;
+    }
+
+
+    /* =========================
+       PORTAFOLIO INDEX
+    ========================= */
+
+    .projects-header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 30px;
+
+        margin-bottom: 55px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .project-down {
+        margin-top: 0;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 16 / 10;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    .project-info h3 {
+        font-size: 20px;
+    }
+
+
+    /* =========================
+       PROCESO
+    ========================= */
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        margin-top: 60px;
+    }
+
+    .process-item {
+        min-height: 220px;
+        margin-bottom: -1px;
+    }
+
+    .process-item h3 {
+        margin-top: 55px;
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+        min-height: 70vh;
+
+        padding:
+            90px 20px;
+    }
+
+    .cta h2 {
+        font-size: clamp(52px, 15vw, 82px);
+        line-height: .83;
+        letter-spacing: -4px;
+    }
+
+    .cta h2 span {
+        -webkit-text-stroke: 1px #fff;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+        padding:
+            60px 20px
+            30px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 45px;
+    }
+
+    .footer-logo {
+        width: min(280px, 80vw);
+    }
+
+    .footer-menu {
+        text-align: left;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+    /* No usar cursor de PC
+       en pantalla táctil */
+
+    .cursor,
+    .cursor-follow {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .header {
+        padding: 0 15px;
+    }
+
+    .header-logo {
+        width: 135px;
+    }
+
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .hero-logo {
+        width: 250px;
+    }
+
+    .hero-title {
+        font-size: clamp(44px, 15vw, 64px);
+        letter-spacing: -2px;
+    }
+
+    .section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .big-heading {
+        font-size: clamp(40px, 13vw, 58px);
+    }
+
+    .feature-overlay {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/* =========================================================
+   DISPOSITIVOS TÁCTILES
+========================================================= */
+
+@media (hover: none) {
+
+    .cursor,
+    .cursor-follow {
+        display: none !important;
+    }
+
+    .project-card:hover .project-image img {
+        transform: none;
+    }
+
+    .portfolio-item:hover img {
+        transform: none;
+    }
+}
